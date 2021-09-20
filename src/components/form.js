@@ -36,7 +36,7 @@ export default function FormPage() {
         dropRef.current.style.border = '3px solid black';
         setLoading(true)
         const storageRef = ref(storage)
-        const fileRef = ref(storage, selectedFile.name);
+        const fileRef = ref(storageRef, selectedFile.name);
         await uploadBytes(fileRef, selectedFile).then((snapshot) => {
             console.log('Uploaded a file!', selectedFile.name);
         });
@@ -61,7 +61,7 @@ export default function FormPage() {
         await setFile(selectedFile)
         setLoading(true)
         const storageRef = ref(storage)
-        const fileRef = ref(storage, selectedFile.name);
+        const fileRef = ref(storageRef, selectedFile.name);
         await uploadBytes(fileRef, selectedFile).then((snapshot) => {
             console.log('Uploaded a file!', selectedFile.name);
         });

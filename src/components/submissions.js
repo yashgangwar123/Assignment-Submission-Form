@@ -8,7 +8,7 @@ export default function Submissions() {
 
     const [Submissions, setSubmissions] = useState([])
 
-    // to fetch all the submissions
+    // to fetch all the submissions from the firestore
     useEffect(() => {
         const fetchUsers = async () => {
           const SubmissionCollection = await getDocs(collection(db, "submissions"));
@@ -19,6 +19,7 @@ export default function Submissions() {
         }
         fetchUsers()
       }, [])
+
 
     return (
         <div className="Submissions-body">

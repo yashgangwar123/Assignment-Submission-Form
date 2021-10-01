@@ -1,7 +1,7 @@
 import React from 'react'
 import "./success.css"
 import { Link } from "react-router-dom";
-import hackathon from "../hackathon.png";
+import hackathon from "../../src/assets/images/hackathon.png";
 
 export default function Submissions() {
     return (
@@ -24,6 +24,5 @@ export default function Submissions() {
                     </div>
                 </div>
             </div>
-        
     )
 }
